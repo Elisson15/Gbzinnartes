@@ -1,0 +1,135 @@
+:root {
+  --verde: #28a745;
+  --azul: #007bff;
+  --cinza-claro: #f4f4f4;
+  --branco: #ffffff;
+  --preto: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--cinza-claro);
+  color: var(--preto);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--azul);
+  color: var(--branco);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--verde);
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--azul), var(--verde));
+  color: var(--branco);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: var(--branco);
+  color: var(--azul);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background: #e6e6e6;
+}
+
+section {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.beneficios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.beneficios li {
+  background: var(--branco);
+  margin: 10px auto;
+  padding: 15px;
+  border-left: 5px solid var(--verde);
+  max-width: 500px;
+  text-align: left;
+}
+
+.depoimentos .card {
+  background: var(--branco);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cta {
+  background: var(--azul);
+  color: var(--branco);
+  padding: 60px 30px;
+}
+
+.cta button {
+  background: var(--verde);
+  color: var(--branco);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: #23963c;
+}
+
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
