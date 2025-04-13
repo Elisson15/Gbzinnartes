@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page - WhatsApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+      <h1>Você está pronto para mudar de vida?</h1>
+      <p>Preencha seus dados abaixo e fale com a nossa equipe agora mesmo no WhatsApp.</p>
+      
+      <form id="whatsappForm">
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp" required>
+        <button type="submit">Quero Saber Mais</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const numero = document.getElementById("whatsapp").value;
+
+      // Substitua o número abaixo pelo seu número de WhatsApp com DDD e código do país (ex: 55 para Brasil)
+      const telefoneDestino = "5582991811629";
+      const mensagem = `Olá! Meu nome é ${nome} e meu WhatsApp é ${numero}. Quero saber mais!`;
+      const link = `https://wa.me/${telefoneDestino}?text=${encodeURIComponent(mensagem)}`;
+      
+      window.open(link, '_blank');
+    });
+  </script>
+
+</body>
+</html>
