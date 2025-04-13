@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificado de Conclusão</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .certificado {
+      border: 10px solid #007bff;
+      padding: 40px;
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      position: relative;
+    }
+
+    .certificado h1 {
+      color: #28a745;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .certificado p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .nome {
+      font-size: 26px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .data {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    input, button {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+
+      .certificado, .certificado * {
+        visibility: visible;
+      }
+
+      .certificado {
+        margin: 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Gerador de Certificado</h2>
+  <p>Digite seu nome para gerar seu certificado:</p>
+  <input type="text" id="nomeAluno" placeholder="Seu nome completo" required>
+  <button onclick="gerarCertificado()">Gerar</button>
+
+  <div id="certificadoBox" style="display: none;">
+    <div class="certificado" id="certificado">
+      <h1>Certificado de Conclusão</h1>
+      <p>Certificamos que</p>
+      <p class="nome" id="nomePreenchido"></p>
+      <p>concluiu com êxito o curso online <strong>"CursoPro - Formação Profissional"</strong>.</p>
+      <p class="data">Data: <span id="dataAtual"></span></p>
+    </div>
+    <button onclick="window.print()">Imprimir / Salvar PDF</button>
+  </div>
+
+  <script>
+    function gerarCertificado() {
+      const nome = document.getElementById('nomeAluno').value;
+      if (!nome.trim()) {
+        alert('Por favor, insira seu nome completo.');
+        return;
+      }
+
+      document.getElementById('nomePreenchido').textContent = nome;
+      const hoje = new Date();
+      const dataFormatada = hoje.toLocaleDateString('pt-BR');
+      document.getElementById('dataAtual').textContent = dataFormatada;
+
+      document.getElementById('certificadoBox').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
