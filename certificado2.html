@@ -44,4 +44,129 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font
+      font-size: 14px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .titulo {
+      font-size: 36px;
+      color: #28a745;
+      margin-bottom: 20px;
+    }
+
+    .nome {
+      font-size: 28px;
+      font-weight: bold;
+      color: #007bff;
+      margin: 20px 0;
+    }
+
+    .descricao {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .assinatura {
+      margin-top: 50px;
+      text-align: right;
+    }
+
+    .assinatura span {
+      display: block;
+      border-top: 1px solid #333;
+      width: 250px;
+      margin-left: auto;
+      font-style: italic;
+    }
+
+    .local-data {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .print-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .print-btn:hover {
+      background-color: #218838;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      .certificado-container, .certificado-container * {
+        visibility: visible;
+      }
+      .certificado-container {
+        margin: 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+      .print-btn, .input-box {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Gerador de Certificado Profissional</h2>
+  <div class="input-box">
+    <p>Digite o nome do aluno:</p>
+    <input type="text" id="nomeAluno" placeholder="Ex: João da Silva">
+    <br>
+    <button onclick="gerarCertificado()">Gerar Certificado</button>
+  </div>
+
+  <div id="certificadoBox" style="display: none;">
+    <div class="certificado-container" id="certificado">
+      <div class="selo">100%<br>Online</div>
+      <h1 class="titulo">Certificado de Conclusão</h1>
+      <p>Certificamos que</p>
+      <p class="nome" id="nomePreenchido"></p>
+      <p class="descricao">concluiu com excelência o curso online <strong>"CursoPro - Formação Profissional"</strong>, com carga horária de 40 horas, abordando competências fundamentais para o mercado atual.</p>
+      
+      <p class="local-data">Emitido em <span id="dataAtual"></span>, via plataforma CursoPro</p>
+      
+      <div class="assinatura">
+        <span>Daniel Souza - Coordenador</span>
+      </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Imprimir / Salvar PDF</button>
+  </div>
+
+  <script>
+    function gerarCertificado() {
+      const nome = document.getElementById('nomeAluno').value.trim();
+      if (!nome) {
+        alert("Por favor, insira o nome do aluno.");
+        return;
+      }
+
+      document.getElementById('nomePreenchido').textContent = nome;
+      const hoje = new Date();
+      const data = hoje.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      });
+      document.getElementById('dataAtual').textContent = data;
+
+      document.getElementById('certificadoBox').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
