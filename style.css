@@ -20,7 +20,7 @@ body {
 }
 
 header {
-  background: var(--azul);
+  background: #003333;
   color: var(--branco);
   padding: 15px 30px;
   display: flex;
