@@ -221,8 +221,9 @@ footer {
 }
 
 .logo img {
-  height: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 100px; /* Ajuste o tamanho conforme necessário */
   width: auto;
+  border-radius: 10px;
 }
 
 
