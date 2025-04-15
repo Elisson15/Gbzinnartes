@@ -3,30 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curso Designer Profissional</title>
+  <title>Primeira Venda Online - Curso Gratuito</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="hero">
-    <header>
-      <img src="images/logo.png" alt="Logo Curso Designer" class="logo" />
-    </header>
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="Logo Primeira Venda Online" class="logo" />
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#inscricao">Inscreva-se</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="content">
-      <h1>Transforme sua carreira com design</h1>
-      <p>Curso completo de design gráfico com certificado, suporte e acesso vitalício.</p>
-      <button onclick="comprarAgora()">Quero me inscrever</button>
-    </main>
+  <section class="hero">
+    <div class="container">
+      <h1>Aprenda a fazer sua primeira venda online</h1>
+      <p>Curso gratuito com estratégias comprovadas para iniciantes no marketing digital.</p>
+      <a href="#inscricao" class="btn">Quero me inscrever</a>
+    </div>
+  </section>
 
-    <footer>
-      <p>© 2025 Curso Designer. Todos os direitos reservados.</p>
-    </footer>
-  </div>
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre o Curso</h2>
+      <p>Este curso foi desenvolvido para ajudar iniciantes a realizar sua primeira venda online, utilizando técnicas simples e eficazes de marketing digital.</p>
+    </div>
+  </section>
 
-  <script>
-    function comprarAgora() {
-      window.location.href = "#comprar"; // ou coloque um link de checkout
-    }
-  </script>
+  <section id="beneficios" class="beneficios">
+    <div class="container">
+      <h2>Benefícios</h2>
+      <ul>
+        <li>Conteúdo 100% gratuito</li>
+        <li>Suporte exclusivo para alunos</li>
+        <li>Certificado de conclusão</li>
+        <li>Grupo de networking</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="depoimentos">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <div class="depoimento">
+        <p>"Consegui minha primeira venda em apenas uma semana após o curso!"</p>
+        <span>- Maria Silva</span>
+      </div>
+      <div class="depoimento">
+        <p>"O curso é direto ao ponto e muito fácil de seguir. Recomendo!"</p>
+        <span>- João Pereira</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="inscricao" class="cta">
+    <div class="container">
+      <h2>Inscreva-se agora gratuitamente</h2>
+      <a href="#" class="btn">Fazer Inscrição</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Primeira Venda Online. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
