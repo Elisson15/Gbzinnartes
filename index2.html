@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curso Designer Profissional</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeira Venda Online</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f4f4f4; color: #333; }
+    header { background: #5e17eb; color: white; padding: 20px; text-align: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    .hero { padding: 40px 20px; text-align: center; background: #eee; }
+    .hero h1 { font-size: 28px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; margin-bottom: 20px; }
+    .hero button { padding: 12px 25px; background: #5e17eb; color: white; border: none; border-radius: 5px; font-size: 16px; }
+    section { padding: 30px 20px; }
+    h2 { font-size: 24px; margin-bottom: 15px; }
+    ul li { margin-bottom: 10px; }
+    .card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    footer { background: #222; color: white; text-align: center; padding: 15px; }
+  </style>
 </head>
 <body>
 
   <header>
-    <img src="images/logo.png" alt="Logo" class="logo" />
-    <h1>Curso Designer Profissional Completo</h1>
+    <h1>Primeira Venda Online</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#depoimentos">Depoimentos</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <h2>Aprenda design gráfico do zero ao avançado</h2>
-    <p>Curso com certificado, acesso vitalício e suporte exclusivo.</p>
-    <a href="#inscricao" class="cta">Quero me inscrever</a>
+    <h1>Comece sua jornada digital agora</h1>
+    <p>Descubra como fazer sua primeira venda online com estratégias práticas.</p>
+    <button onclick="alert('Curso disponível em breve!')">Quero aprender</button>
   </section>
 
-  <section class="beneficios">
-    <h2>O que você vai receber:</h2>
+  <section id="sobre">
+    <h2>Sobre o Curso</h2>
+    <p>Este curso é ideal para iniciantes que desejam entrar no mundo das vendas online. Vamos te guiar passo a passo até sua primeira venda.</p>
+  </section>
+
+  <section id="cursos">
+    <h2>Cursos Disponíveis</h2>
+    <div class="card">Instagram para Vendas</div>
+    <div class="card">WhatsApp Estratégico</div>
+    <div class="card">Design para Negócios</div>
+    <div class="card">Tráfego Pago Essencial</div>
+  </section>
+
+  <section id="beneficios">
+    <h2>Benefícios</h2>
     <ul>
-      <li>+50 aulas práticas e diretas</li>
-      <li>Certificado de conclusão</li>
-      <li>Suporte via grupo exclusivo</li>
-      <li>Acesso vitalício</li>
+      <li>Acesso imediato</li>
+      <li>Grupo exclusivo</li>
+      <li>Certificado ao final</li>
+      <li>Conteúdo 100% prático</li>
     </ul>
   </section>
 
-  <section class="modulos">
-    <h2>Conteúdo do Curso</h2>
-    <div class="cards">
-      <div class="card">Módulo 1: Logotipo</div>
-      <div class="card">Módulo 2: Banners</div>
-      <div class="card">Módulo 3: Camisetas</div>
-      <div class="card">Projeto Final</div>
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="card">
+      <p>"Consegui minha primeira venda em 3 dias! Muito obrigada pelo conteúdo."</p>
+      <strong>- Juliana S.</strong>
+    </div>
+    <div class="card">
+      <p>"Valeu cada centavo. Didático e direto ao ponto."</p>
+      <strong>- Carlos M.</strong>
     </div>
   </section>
 
-  <section class="depoimentos">
-    <h2>Depoimentos de Alunos</h2>
-    <blockquote>"O melhor curso que já fiz. Simples e direto!"<br>– Ana Paula</blockquote>
-    <blockquote>"Muito prático e com bom suporte. Valeu cada centavo!"<br>– João Vitor</blockquote>
-  </section>
-
-  <section id="inscricao" class="cta-final">
-    <h2>Garanta sua vaga agora mesmo!</h2>
-    <a href="https://seulinkdecompra.com" class="cta">Comprar Curso</a>
-  </section>
-
   <footer>
-    <p>&copy; 2025 Curso Designer. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Primeira Venda Online - Todos os direitos reservados</p>
   </footer>
 
 </body>
