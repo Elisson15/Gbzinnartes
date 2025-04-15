@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Landing Page - WhatsApp</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso Designer Profissional</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <div class="hero">
+    <header>
+      <img src="images/logo.png" alt="Logo Curso Designer" class="logo" />
+    </header>
 
-  <div class="container">
-    <div class="content">
-      <h1>Você está pronto para mudar de vida?</h1>
-      <p>Preencha seus dados abaixo e fale com a nossa equipe agora mesmo no WhatsApp.</p>
-      
-      <form id="whatsappForm">
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp" required>
-        <button type="submit">Quero Saber Mais</button>
-      </form>
-    </div>
+    <main class="content">
+      <h1>Transforme sua carreira com design</h1>
+      <p>Curso completo de design gráfico com certificado, suporte e acesso vitalício.</p>
+      <button onclick="comprarAgora()">Quero me inscrever</button>
+    </main>
+
+    <footer>
+      <p>© 2025 Curso Designer. Todos os direitos reservados.</p>
+    </footer>
   </div>
 
   <script>
-    document.getElementById("whatsappForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      const nome = document.getElementById("nome").value;
-      const numero = document.getElementById("whatsapp").value;
-
-      // Substitua o número abaixo pelo seu número de WhatsApp com DDD e código do país (ex: 55 para Brasil)
-      const telefoneDestino = "5582991811629";
-      const mensagem = `Olá! Meu nome é ${nome} e meu WhatsApp é ${numero}. Quero saber mais!`;
-      const link = `https://wa.me/${telefoneDestino}?text=${encodeURIComponent(mensagem)}`;
-      
-      window.open(link, '_blank');
-    });
+    function comprarAgora() {
+      window.location.href = "#comprar"; // ou coloque um link de checkout
+    }
   </script>
-
 </body>
 </html>
